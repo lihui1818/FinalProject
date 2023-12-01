@@ -130,7 +130,7 @@ public class RPGGame {
 // ランダムに敵を生成するメソッド
 private static Character getRandomEnemy() {
     Random random = new Random();
-    int enemyType = random.nextInt(3); // 0, 1, 2のいずれか
+    int enemyType = random.nextInt(4); // 0, 1, 2のいずれか
 
     switch (enemyType) {
         case 0:
@@ -139,6 +139,8 @@ private static Character getRandomEnemy() {
             return new Goblin("ゴブリン");
         case 2:
             return new Werewolf("狼男");
+        case 3:
+            return new DemonLord("魔王");
         default:
             return new Slime("スライム");
     }
